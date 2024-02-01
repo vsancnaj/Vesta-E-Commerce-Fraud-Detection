@@ -4,19 +4,44 @@ As you face the inconvenience of a declined card at the checkout, it's these sys
 
 ## Getting Started
 
-### Dependencies
-
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
 ### Prerequisites
 
 What things you need to install the software and how to install them.
 
 ```markdown
+- Python 3.10.12 (recommended: 3.8 or higher)
+- Other necessary libraries and dependencies as listed in `requirements.txt`.
 - A Google account (for Google Colab)
 - A local or cloud environment that can run Jupyter notebooks if not using Google Colab
 ```
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+1. Clone the repository.
+   ```
+   git clone <repository-url>
+   cd <repository-name>
+   ```
+2. Install required Python packages.
+     ```
+     pip install -r requirements.txt
+     ```
+### Running the Notebook
+**Google Colab** <br />
+If you are using Google Colab, follow these instructions:
+1. Open Google Colab
+2. Click on File > Open notebook > GitHub tab and paste the URL of your notebook.
+3. Or, click on File > Upload notebook to upload the notebook file from your local machine.
+4. Follow the instructions within the notebook to mount your Google Drive if required for data access or file storage.<br />
+
+**Local Jupyter Installation** <br />
+If you are running the notebook locally:<br />
+1. Go to Jupyter Notebook.
+```bash
+jupyter notebook
+```
+2. Navigate to the notebook file in the Jupyter interface that opens in your web browser and open it.
+3. Run the cells in the notebook sequentially to replicate the analysis.
+
 ### Setting Up the Kaggle API and Downloading the Dataset
 
 To utilize datasets from Kaggle for your project, you'll need to configure the Kaggle API on your system. Follow these clear steps to get started:
