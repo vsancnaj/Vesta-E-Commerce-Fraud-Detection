@@ -77,7 +77,7 @@ To utilize datasets from Kaggle for your project, you'll need to configure the K
     !mkdir ~/.kaggle
 
     # Copy the kaggle.json file into this directory
-    !cp /content/drive/MyDrive/Springboard/kaggle.json ~/.kaggle/
+    !cp /your/drive/kaggle.json ~/.kaggle/
 
     # Secure the API token by updating its permissions
     !chmod 600 ~/.kaggle/kaggle.json
