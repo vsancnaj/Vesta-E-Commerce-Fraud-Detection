@@ -1,6 +1,45 @@
-# Vesta-E-Commerce-Fraud-Detection
+# Vesta E-Commerce Fraud Detection
 
-In the realm of e-commerce, navigating the fine line between security and convenience is crucial, and it's the adept implementation of fraud prevention systems that make it possible. As you face the inconvenience of a declined card at checkout, remember that these systems are the unsung heroes guarding against unauthorized transactions. Vesta Corporation, in partnership with IEEE-CIS, is at the forefront of refining these systems. They leverage a vast dataset from real-world transactions to benchmark machine learning models, ensuring your transactions are secure and seamless.
+## Project Summary
+
+### Introduction
+This project aims to improve fraud detection systems in e-commerce, partnering with IEEE-CIS and Vesta Corporation to analyze a large dataset of real-world transactions.
+
+### Dataset
+- **Size**: 590,540 transactions, 434 features.
+- **Key Features**: Transaction amount, transaction time, card details, address, distance, email domains, and various anonymized features.
+
+### Exploratory Data Analysis
+- **Transaction Amounts**: Log transformation revealed clear distinctions between fraudulent and non-fraudulent transactions.
+- **Timing Patterns**: Fraudulent transactions often occurred at irregular hours.
+- **Feature Importance**: PCA reduced multicollinearity, highlighting key features like 'TransactionAmt' and 'TransactionDT'.
+
+### Challenges
+- **Imbalanced Data**: The dataset exhibited a significant imbalance between fraudulent and non-fraudulent transactions, posing challenges for effective model training. Due to the many anonymous or encoded features, techniques like SMOTE were not applicable since they require knowledge of the feature meanings. Consequently, we relied heavily on comprehensive feature selection techniques and specific models capable of handling imbalanced data.
+- **Feature Selection**: Choosing the most relevant features from a large set of 434 features required extensive visual analysis and dimensionality reduction techniques like PCA and Random Forest feature importance.
+
+
+### Model Selection
+- **Objective**: Balance recall and precision to minimize false positives and maximize fraud detection.
+- **Hyperparameter Tuning**: Grid search for Random Forest, Logistic Regression, and XGBoost.
+  - **Random Forest**: ROC-AUC 0.89
+  - **Logistic Regression**: ROC-AUC 0.51
+  - **XGBoost**: ROC-AUC 0.88
+
+### Precision-Recall Analysis
+- **Threshold Experimentation**: XGBoost maintained better stability and performance across different thresholds, chosen as the final model.
+
+### Final Model Choice
+- **Model**: XGBoost
+- **Performance**: Balanced precision and recall, F1-score 0.76, overall accuracy 81%.
+
+### Further Work
+1. **Model Integration**: Explore ensembling Random Forest and XGBoost.
+2. **Real-Time Deployment**: Evaluate the model in a live environment for real-time fraud detection.
+
+This project enhances fraud detection accuracy, ensuring robust protection and minimizing disruptions for genuine users.
+
+
 
 ## Getting Started
 
