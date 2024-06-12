@@ -30,8 +30,8 @@ This project aims to improve fraud detection systems in e-commerce, partnering w
 - **Threshold Experimentation**: XGBoost maintained better stability and performance across different thresholds, chosen as the final model.
 
 ### Final Model Choice
-- **Model**: XGBoost
-- **Performance**: Balanced precision and recall, F1-score 0.76, overall accuracy 81%.
+The XGBoost model was chosen for its robust performance and balanced precision-recall metrics, making it effective for fraud detection. The model demonstrated a strong F1-score of 0.76, with nearly equal precision and recall scores for both classes and an overall accuracy of 81%.
+
 
 ### Further Work
 1. **Model Integration**: Explore ensembling Random Forest and XGBoost.
